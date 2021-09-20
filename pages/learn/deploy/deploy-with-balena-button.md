@@ -87,5 +87,8 @@ version: 3.5.2
   - `applicationConfigVariables` - Configuration variables allow you to provide runtime configuration to the host OS and supervisor. These variables all begin with `BALENA_` or `RESIN_`.
   - `defaultDeviceType` - The device type that will be pre-selected in the "Create fleet" modal. It defaults to Raspberry Pi 4 if not provided. You can find a list of [device types](/reference/hardware/devices/) here.
   - `supportedDeviceType` - The device types that the fleet supports. You can find a list of [device types](/reference/hardware/devices/) here.
+- `version` - Provides a user-defined version value that is shown in the Version column when
+  listing Releases in the balenaCloud web dashboard, and which may also be queried through
+  the balena API.
 
 [balenahub]:{{ $links.balenaHubUrl }}
