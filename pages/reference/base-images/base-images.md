@@ -46,7 +46,7 @@ balenalib/<hw>-<distro>-<lang_stack>:<lang_ver>-<distro_ver>-(build|run)-<yyyymm
 
 #### Image Names
 
-- `<hw>` is either architecture or device type and is **mandatory**. If using `Dockerfile.template`, you can replace this with `%%BALENA_MACHINE_NAME%%` or `%%BALENA_ARCH%%`. For a list of available device names and architectures, see the [Device types](/reference/base-images/devicetypes/).
+- `<hw>` is either architecture or device type and is **mandatory**. If using `Dockerfile.template`, you can replace this with `%%BALENA_MACHINE_NAME%%` or `%%BALENA_ARCH%%`. Images named with device type generally are built from images named with architecture and include more tools, as you can see in this [example]({{ $links.githubLibrary }}/base-images/blob/master/balena-base-images/device-base/raspberrypi3/debian/bookworm/run/Dockerfile#L7). For a list of available device names and architectures, see the [Device types](/reference/base-images/devicetypes/).
 - `<distro>` is the Linux distribution. Currently there are 4 distributions, namely Debian, Alpine, Ubuntu and Fedora. This field is optional and will default to Debian if left out.
 - `<lang_stack>` is the programming language pack, currently we support Node.js, Python, OpenJDK, .Net, and Go. This field is optional, and if left out, no language pack will be installed, so you will just have the distribution and you can later install and use any language in your image/container.
 
